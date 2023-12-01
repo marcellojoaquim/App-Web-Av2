@@ -6,12 +6,14 @@
     flex-direction: row;
     align-items: center;
     width: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
     
 }
 
 .header-home h2 {
     font-size: 3rem;
+    font-family: "Saira Stencil One";
+    color: gray
 }
 
 .header-home h1 {
@@ -29,3 +31,5 @@ p {
     text-decoration: none;
     color: black;
 }
+
+
