@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './components/Login'
 import Header from './components/Header'
 import Home from './components/Form/Home'
+import Cadastro from './components/Form/Cadastro'
 
 import './App.css'
 
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path='/login' element={<Login />} />
           <Route path='/home' element={<Home />} />
+          <Route path='/cadastro' element={<Cadastro />} />
         </Routes>
       </BrowserRouter>
     </div>

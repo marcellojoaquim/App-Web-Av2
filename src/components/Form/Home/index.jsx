@@ -1,26 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function Form() {
 
-    function handleSubmit(e) {
+    const [msg, setMsg] = useState(()=>{
+        const s = localStorage.getItem('msg');
+        const initValue = JSON.parse(s);
+        return initValue || "";
+    });
 
-        e.preventDefault();
-    
-        const form = e.target;
-        const formData = new FormData(form);
+    useEffect(()=>{
+        localStorage.setItem('msg', JSON.stringify(msg));
+    }, [msg]);
 
-        fetch('/some-api', { method: form.method, body: formData });
-    
-        const formJson = Object.fromEntries(formData.entries());
-        console.log(formJson);
-      }
-
-    return(
-        <form method="Post" onSubmit={handleSubmit}>
-            <label> 
-                Mensagem <input className="input" placeholder="Digite aqui sua mensagem"/> 
-            </label>
-        </form>
+    return (
+        <div>
+            <form>
+                <label>
+                    Mensagem <input
+                        type="text"
+                        className="input"
+                        onChange={(e) => setMsg(e.target.value) }
+                        value={msg}
+                        name="teste"
+                        placeholder="Digite aqui sua mensagem"
+                        />
+                </label>
+                <label>
+                    <input type="submit" value="Postar" />
+                </label>
+            </form>
+            <div>
+                <p>
+                    Teste
+                </p>
+            </div>
+        </div>
     );
 }
 export default Form;
