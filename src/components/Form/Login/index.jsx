@@ -5,7 +5,7 @@ function Form() {
   
 
     return(
-        <div className="form-login" onSubmit={this.handleSubmit}>
+        <div className="form-login">
         <label>
         <input type="text" name="username" placeholder="Nome de usuário" required />
         <input type="text" name="username" placeholder="Senha" required />

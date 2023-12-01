@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 function Form() {
 
-    const [msg, setMsg] = useState(()=>{
-        const s = localStorage.getItem('msg');
-        const initValue = JSON.parse(s);
-        return initValue || "";
-    });
-
-    useEffect(()=>{
+    const [msg, setMsg] = useState(["uybas", "jasnkajns", 'asjhdbajsbd']);
+    const v = (e) => {
+        e.preventDefault();
         localStorage.setItem('msg', JSON.stringify(msg));
-    }, [msg]);
+        /*
+        const text = ''
+        text = localStorage.getItem('msg');
+*/
+        console.log(msg);
+
+    }
 
     return (
         <div>
@@ -19,20 +21,22 @@ function Form() {
                     Mensagem <input
                         type="text"
                         className="input"
-                        onChange={(e) => setMsg(e.target.value) }
+                        onChange={(e) => setMsg(e.target.value)}
                         value={msg}
                         name="teste"
                         placeholder="Digite aqui sua mensagem"
-                        />
+                    />
                 </label>
                 <label>
-                    <input type="submit" value="Postar" />
+                    <button type="submit" value="Postar" onClick={v}> mandar</button>
                 </label>
             </form>
             <div>
-                <p>
-                    Teste
-                </p>
+                <ul>{
+                    msg.map((i) => {
+                        <p>{i}</p>
+                    })
+                }</ul>
             </div>
         </div>
     );
