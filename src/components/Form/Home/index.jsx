@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function Form() {
 
-    const [msg, setMsg] = useState(["uybas", "jasnkajns", 'asjhdbajsbd']);
+    const [msg, setMsg] = useState('');
     const v = (e) => {
         e.preventDefault();
         localStorage.setItem('msg', JSON.stringify(msg));
@@ -28,15 +28,16 @@ function Form() {
                     />
                 </label>
                 <label>
-                    <button type="submit" value="Postar" onClick={v}> mandar</button>
+                    <button type="submit" value="Postar" onClick={v}>Postar</button>
                 </label>
             </form>
             <div>
-                <ul>{
-                    msg.map((i) => {
-                        <p>{i}</p>
-                    })
-                }</ul>
+                <ul>
+
+                </ul>
+                <p>
+                    {msg}
+                </p>
             </div>
         </div>
     );
