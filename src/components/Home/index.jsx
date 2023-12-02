@@ -1,8 +1,9 @@
 import React from "react";
 import FormHome from "../Form/Home"
 
+
 function Home() {
-    return(
+    return (
         <>
             <div className="div-titulo">
                 <h1>Publicação</h1>
@@ -11,7 +12,7 @@ function Home() {
                 <FormHome />
             </div>
         </>
-        
+
     );
 }
 export default Home;

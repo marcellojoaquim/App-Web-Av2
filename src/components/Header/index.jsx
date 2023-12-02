@@ -3,25 +3,19 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 
 
+
 const options = ['Login', 'Cadastro', 'Home'];
 
 function Header() {
 
-    const [name, setName] = useState('');
-    const [userName, setUserName] = useState('');
+    const [userName, setUserName] = useState(()=>{
+        const s = localStorage.getItem('userName');
+        const initV = JSON.parse(s);
+        return initV;
+    });
+
+
     
-
-    useEffect(()=>{
-        if(localStorage.getItem('userName')!== null){
-        setName(JSON.parse(localStorage.getItem('userName')))
-        }
-    }, []);
-
-    useEffect(()=>{
-        localStorage.setItem('userName', JSON.stringify(name));
-        setUserName(JSON.parse(localStorage.getItem('userName')))
-        console.log(JSON.parse(localStorage.getItem('userName')))
-    }, [name])
 
     if(userName != null){
         return (
