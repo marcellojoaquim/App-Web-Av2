@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './Home.css'
 
 
 function Form() {
@@ -16,29 +17,31 @@ function Form() {
     }
 
     return (
-        <div>
-            <form>
+        <div className="home">
+            <form className="form-home">
                 <label>
-                    Mensagem <input
+                    <input
                         type="text"
                         className="input"
                         onChange={(e) => setMsg(e.target.value)}
                         value={msg}
                         name="teste"
-                        placeholder="Digite aqui sua mensagem"
+                        placeholder="No que está pensando?"
                     />
                 </label>
                 <label>
-                    <button type="submit" value="Postar" onClick={v}>Postar</button>
+                    <button className="botao-post" type="submit" value="Postar" onClick={v}>Postar</button>
                 </label>
             </form>
-            <div>
+            <div className="titulo-feed">
+                <h2>FEED</h2>
+            </div>
+            <div className="feed">
                 <ul>
-
+                    <p>
+                        {msg}
+                    </p>
                 </ul>
-                <p>
-                    {msg}
-                </p>
             </div>
         </div>
     );

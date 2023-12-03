@@ -1,0 +1,39 @@
+
+.home {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.div-titulo {
+    color: whitesmoke;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    text-align: left;
+}
+
+.container-form {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.div-titulo h1 {
+    color: #FFF;
+    font-family: 'Saira Condensed';
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 30px;
+    width: 100%;
+    text-align-last: center;
+    margin-top: 2em;
+}

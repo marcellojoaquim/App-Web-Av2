@@ -15,7 +15,9 @@ function Form() {
   
     return (
       <div className="form-login">
+        <h1>LOGIN</h1>
         <label>
+          <p>Usuário</p>
           <input
             type="text"
             className="input"
@@ -25,9 +27,11 @@ function Form() {
             placeholder="Nome de usuário"
             required
           />
-          <input type="password" name="senha" placeholder="Senha" required />
+          <p>Senha</p>
+          <input type="password" className="input" name="senha" placeholder="Senha" required />
             <button type="submit" className="botao-submit" onClick={v} >Entrar</button>
         </label>
+        <h3>Não tenho uma conta</h3>
       </div>
     );
   }

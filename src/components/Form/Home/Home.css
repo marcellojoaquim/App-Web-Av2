@@ -1,0 +1,40 @@
+.form-home {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.input {
+    width: 400px;
+    height: 100px;
+    background-color: #37394E;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.botao-post {
+    cursor: pointer;
+    background: #FF5D00;
+    border-radius: 5px;
+    flex-shrink: 0;
+    width: 68px;
+    height: 38px;
+    font-family: 'Saira Condensed';
+    font-size: 20px;
+    border: none;
+    margin-top: 5px;
+    margin-left: 317px;
+}
+
+.titulo-feed {
+    margin-top: 3em;
+}
+
+.titulo-feed h2 {
+    color: #FFF;
+    font-family: 'Saira Condensed';
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: normal;
+}

@@ -1,5 +1,67 @@
-* {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+
+
+  .info-text-sga h1 {
+    color: #F00;
+    font-family: 'Saira Stencil One';
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.info-text {
+    margin-bottom: 200px;
+}
+
+.info-text-sga p {
+    color: #FFF;
+    font-family: 'Saira Stencil One';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.melhores {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.botao-submit {
+  cursor: pointer;
+  background: #FF5D00;
+  border-radius: 6px;
+  flex-shrink: 0;
+  width: 68px;
+  height: 38px;
+  font-family: 'Saira Condensed';
+  font-size: 20px;
+  border: none;
+  margin-top: 15px;
+}
+
+.form-login h1 {
+  color: #F00;
+  font-family: "Saira Stencil One";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.form-login p {
+  font-family: "Saira Condensed";
+  color: #FFF;
+  font-size: 25px;
+  font-style: normal;
+}
+.form-login input {
+  margin-bottom: 15px;
+  width: 300px;
+  height: 30px;
+}
+
+.form-login h3 {
+  margin-top: 150px;
+  color: #FFF;
+}
