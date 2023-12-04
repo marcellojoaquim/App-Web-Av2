@@ -17,7 +17,7 @@ function Form() {
     }
 
     return (
-        <div className="home">
+        <div className="home-input">
             <form className="form-home">
                 <label>
                     <input

@@ -8,20 +8,14 @@ const options = ['Login', 'Cadastro', 'Home'];
 
 function Header() {
 
-    const [userName, setUserName] = useState(()=>{
-        const s = localStorage.getItem('userName');
-        const initV = JSON.parse(s);
-        return initV;
-    });
+    const user = JSON.parse(localStorage.getItem('userName'));
 
 
-    
-
-    if(userName != null){
+    if(user != null){
         return (
             <header className="header-home">
                 <h1 className="title">SGAMING</h1>
-                <h2 className="title">Bem Vindo, {userName}</h2>
+                <h2 className="title">Bem Vindo, {user.userName}</h2>
                 <ul>
                     {options.map((texto) => (
                         <Link to={`/${texto.toLowerCase()}`}>

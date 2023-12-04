@@ -1,19 +1,38 @@
 import React, { useState } from "react";
-import {useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import './Login.css'
 
 function Form() {
 
   const [userName, setUserName] = useState('');
-  const history = useNavigate();
+  const navigate = useNavigate();
   const path = '/home';
 
+  const name = JSON.parse(localStorage.getItem('userName'));
+  console.log(userName);
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    if(userName){
+      navigate(path);
+    }
+
+    const objPessoa = {
+      userName
+    }
+
+    const objPessoaJson = JSON.stringify(objPessoa);
+    localStorage.setItem('userName', objPessoaJson);
+  }
+/*
   const v = (e) => {
     e.preventDefault();
     localStorage.setItem('userName', JSON.stringify(userName));
-    history(path);
+    navigate(path);
   }
-  
-    return (
+  */
+
+  return (
+    <div className="form">
       <div className="form-login">
         <h1>LOGIN</h1>
         <label>
@@ -29,12 +48,15 @@ function Form() {
           />
           <p>Senha</p>
           <input type="password" className="input" name="senha" placeholder="Senha" required />
-            <button type="submit" className="botao-submit" onClick={v} >Entrar</button>
+          <button type="submit" className="botao-submit" onClick={handleSubmit} >Entrar</button>
         </label>
-        <h3>Não tenho uma conta</h3>
+        <Link to={'/cadastro'}>
+          <h3>Não tenho uma conta</h3>
+        </Link>
       </div>
-    );
-  }
+    </div>
+  );
+}
 
 
 export default Form;
