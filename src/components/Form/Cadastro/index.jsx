@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import './Cadastro.css'
 import { Link } from "react-router-dom";
 
 
 function FormCadastro() {
 
+
     return (
+        
         <div>
             <div className="form-signup">
                 <h1>Nova Conta</h1>
