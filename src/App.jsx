@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Header />
+      <Header />
         <Routes>
           <Route path='/login' element={<Login />} />
           <Route path='/' element={<Login />} />

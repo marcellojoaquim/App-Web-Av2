@@ -1,26 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 
 
 
-const options = ['Login', 'Cadastro', 'Home'];
+const options = [{
+    id: 0,
+    text: 'Login'
+}, {
+    id: 1,
+    text: 'Cadastro'
+}, {
+    id: 2,
+    text: 'Home'
+}];
 
 function Header() {
 
     const user = JSON.parse(localStorage.getItem('userName'));
 
 
-    if(user != null){
+    if (user != null) {
         return (
             <header className="header-home">
                 <h1 className="title">SGAMING</h1>
                 <h2 className="title">Bem Vindo, {user.userName}</h2>
                 <ul>
                     {options.map((texto) => (
-                        <Link to={`/${texto.toLowerCase()}`}>
+                        <Link to={`/${texto.text.toLowerCase()}`}>
                             <li>
-                                <p>{texto}</p>
+                                <p>{texto.text}</p>
                             </li>
                         </Link>
                     ))}
@@ -34,9 +43,9 @@ function Header() {
             <h2 className="title">Bem Vindo</h2>
             <ul>
                 {options.map((texto) => (
-                    <Link to={`/${texto.toLowerCase()}`}>
+                    <Link to={`/${texto.text.toLowerCase()}`}>
                         <li>
-                            <p>{texto}</p>
+                            <p>{texto.text}</p>
                         </li>
                     </Link>
                 ))}

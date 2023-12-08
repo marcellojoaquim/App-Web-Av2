@@ -9,10 +9,11 @@ function Form() {
   const path = '/home';
 
   const name = JSON.parse(localStorage.getItem('userName'));
-  console.log(userName);
+  console.log(name);
+  
   const handleSubmit = (e)=>{
     e.preventDefault();
-    if(userName){
+    if(name){
       navigate(path);
     }
 
